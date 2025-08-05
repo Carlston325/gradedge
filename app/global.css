@@ -58,6 +58,15 @@ header {
   align-items: center;
   justify-content: space-around;
 }
+header > h2 {
+  font: 900 1.2rem var(--font-lato);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+header > h2 > span {
+  padding-right: 0.5rem;
+}
 
 header > nav ul {
   display: flex;
@@ -128,4 +137,8 @@ main {
   padding: 0 10px;
   display: flex;
   gap: 20px;
+}
+
+.active-tab {
+  text-decoration: overline;
 }
