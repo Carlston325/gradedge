@@ -20,11 +20,11 @@ export default function Reviews(props) {
     }
   }
 
-  useEffect(async () => {
-    const review = await containerRef.current;
+  useEffect(() => {
+    const review = containerRef.current;
     const scrollAmount = review.offsetWidth;
 
-    const interval = setInterval(() => {
+    setInterval(() => {
       const isAtEnd =
         review.scrollLeft + review.offsetWidth >= review.scrollWidth;
 
@@ -35,7 +35,7 @@ export default function Reviews(props) {
       }
     }, 15000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval();
   }, []);
 
   return (

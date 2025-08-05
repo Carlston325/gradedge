@@ -7,6 +7,11 @@
   --dark: #000000;
 }
 
+h1 {
+  font-family: var(--font-lato);
+  font-size: 3rem;
+}
+
 .arrow-btn-container {
   box-shadow: var(--dark) 0px 0px 10px -6px;
   height: 100%;
@@ -42,6 +47,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: var(--font-merriweather-sans);
 }
 
 header {
@@ -53,7 +59,7 @@ header {
   justify-content: space-around;
 }
 
-header ul {
+header > nav ul {
   display: flex;
   gap: 2rem;
 }

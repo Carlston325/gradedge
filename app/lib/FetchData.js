@@ -4,7 +4,9 @@ async function fetchReviewData() {
   const reviews = await pool.connect();
 
   try {
-    const result = await reviews.query("SELECT * FROM gradedge_review");
+    const result = await reviews.query(
+      "SELECT * FROM gradedge_review WHERE stars >= 3"
+    );
 
     return result.rows;
   } catch (error) {
