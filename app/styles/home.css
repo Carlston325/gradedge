@@ -1,0 +1,43 @@
+main {
+  flex: 1;
+}
+.hero {
+  width: 100%;
+  min-height: 200px;
+  height: 35vh;
+}
+
+.review-section {
+  height: 250px;
+  background-color: #e7c2873b;
+  display: flex;
+  align-items: center;
+}
+.review-section > .review-container {
+  width: 100%;
+  margin: 20px 0;
+  padding: 0 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  box-shadow: none;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.review-container::-webkit-scrollbar {
+  display: none;
+}
+
+.review-card {
+  flex: 0 0 auto;
+  min-width: 200px;
+  width: 400px;
+}
+
+.feature-container {
+  width: 100%;
+  margin: 20px 0;
+  padding: 0 10px;
+  display: flex;
+  gap: 20px;
+}

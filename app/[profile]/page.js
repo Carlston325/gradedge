@@ -1,6 +1,4 @@
-import Image from "next/image";
-
-export default function Home() {
+export default function Profile() {
   return (
     <div>
       <main>Profile</main>

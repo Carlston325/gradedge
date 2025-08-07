@@ -1,3 +1,4 @@
+import "./styles/home.css";
 import Hero from "./ui/Hero";
 import Reviews from "./ui/Reviews";
 import fetchReviewData from "./lib/FetchData";

@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono, Lato, Merriweather_Sans } from "next/font/google";
-import "./global.css";
+import "./styles/global.css";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
 
