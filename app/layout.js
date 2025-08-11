@@ -1,17 +1,28 @@
-import { Geist, Geist_Mono, Lato, Merriweather_Sans } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Lato,
+  Montserrat,
+  Montserrat_Underline,
+} from "next/font/google";
 import "./styles/global.css";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
 
-const merriweather = Merriweather_Sans({
-  variable: "--font-merriweather-sans",
+const montserratUnderline = Montserrat_Underline({
+  variable: "--font-montserrat-underline",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
 const lato = Lato({
   variable: "--font-lato",
-  weight: ["100", "300", "400"],
-  subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"],
+  subset: ["latin"],
 });
 
 const geistSans = Geist({
@@ -33,7 +44,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${merriweather.variable} ${lato.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${lato.variable} ${montserratUnderline.variable} ${montserrat.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
         {children}

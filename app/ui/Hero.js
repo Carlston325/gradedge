@@ -4,7 +4,7 @@ export default function Hero() {
       <div>
         <h2>Hello, I am GRADEDGE</h2>
         <h3>But what matters is.</h3>
-        <h1>Who You are .......!</h1>
+        <h1 className="title">Who You are .......!</h1>
       </div>
     </div>
   );

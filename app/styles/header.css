@@ -8,7 +8,7 @@ header {
   justify-content: space-around;
 }
 header > h2 {
-  font: 900 1.2rem var(--font-lato);
+  font: 900 1.2rem var(--font-montserrat-underline);
   text-transform: uppercase;
   letter-spacing: 0.3rem;
 }
