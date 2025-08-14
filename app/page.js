@@ -8,6 +8,7 @@ dotenv.config();
 export default async function Home() {
   //Fetch review data
   let reviewData = await fetchReviewData();
+  console.log(reviewData);
 
   return (
     <main>

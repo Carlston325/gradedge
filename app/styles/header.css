@@ -1,23 +1,49 @@
 header {
-  width: 100%;
+  height: 5rem;
   margin: 0rem 2rem;
   padding: 1rem;
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
+
 header > h2 {
-  font: 900 1.2rem var(--font-montserrat-underline);
+  min-width: 30%;
+  height: 100%;
+  display: flex;
+  font: 900 clamp(.8rem, 2vw, 2.2rem) var(--font-montserrat-underline);
   text-transform: uppercase;
   letter-spacing: 0.3rem;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
 header > h2 > span {
   padding-right: 0.5rem;
 }
 
+header > nav{
+  width: 70%;
+  height: 100%;
+  
+}
+
 header > nav ul {
+  width: 100%;
+  height:inherit;
+  padding: 0 5%;
   display: flex;
   gap: 2rem;
+  justify-content: flex-end;
+  font-weight: 500;
+}
+
+header > nav ul > li  {
+    font-size: .8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -.06rem;
+    word-spacing: .1rem;
 }
