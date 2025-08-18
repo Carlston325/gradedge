@@ -14,12 +14,14 @@ export default function Header() {
 
   return (
     <header>
-      <h2>
-        <span>
-          <ShieldIcon />
-        </span>
-        gradedge
-      </h2>
+      <Link href={"/"}>
+        <h2>
+          <span>
+            <ShieldIcon />
+          </span>
+          gradedge
+        </h2>
+      </Link>
       <nav>
         <ul>
           <li>
