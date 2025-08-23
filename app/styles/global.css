@@ -54,3 +54,8 @@ body {
   justify-content: space-between;
   font-family: var(--font-lato);
 }
+
+.bold {
+  font-weight: 900;
+  font-size:medium;
+}
