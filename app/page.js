@@ -4,13 +4,12 @@ import Reviews from "./ui/Reviews";
 import fetchReviewData from "./lib/FetchData";
 import dotenv from "dotenv";
 dotenv.config();
-
+// import cvImage from "/cv-image.png"
 
 
 export default async function Home() {
   //Fetch review data
   let reviewData = await fetchReviewData();
-  console.log(reviewData);
 
   return (
     <main>

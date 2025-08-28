@@ -12,7 +12,7 @@ header h2 {
   min-width: 30%;
   height: 100%;
   display: flex;
-  font: 900 clamp(.8rem, 2vw, 2.2rem) var(--font-montserrat-underline);
+  font: 900 clamp(.8rem, 1.8vw, 2.2rem) var(--font-montserrat-underline);
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   flex-wrap: nowrap;

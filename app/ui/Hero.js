@@ -2,7 +2,9 @@
 import {useEffect, useState} from "react"
 
 export default function Hero(props) {
-  const [heroImgSrc, setHeroImgSrc] = useState("https://gdoc.io/uploads/teacher-cv-free-google-docs-template-t-376x520.webp")
+
+  const [heroImgSrc, setHeroImgSrc] = useState("/cv-image.jpg");
+  const [heroImgeAlt, setHeroImgAlt] = useState("A sample CV image");
 
   useEffect(()=>{
     const objOne = document.querySelector(".obj-1")
@@ -27,19 +29,26 @@ export default function Hero(props) {
           objTwo.className = "obj-2";
           objThree.forEach(obj => obj.className = "obj-3");
 
-         
+          setHeroImgSrc("/cv-image.jpg")
+          setHeroImgAlt("A sample CV image")
           break;
         
         case 2:
           objOne.className = "obj-1";
           objTwo.className = "obj-2 bold";
           objThree.forEach(obj => obj.className = "obj-3");
+
+          setHeroImgSrc("/cover-letter-image.png")
+          setHeroImgAlt("A sample Cover Letter image")
           break;
 
         case 3:
           objOne.className = "obj-1";
           objTwo.className = "obj-2";
           objThree.forEach(obj => obj.className = "obj-3 bold");
+
+          setHeroImgSrc("/ats-checker-image.png")
+          setHeroImgAlt("A sample ATS checker image")
           break;
 
         default:
@@ -53,7 +62,7 @@ export default function Hero(props) {
       <div className="hero-title">
         <h2>Hello, I am GRADEDGE</h2>
         <h3>But what matters is.</h3>
-        <h1 className="title">Who You are .......!</h1>
+        <h1 className="title">Who Are You ______</h1>
       </div>
       <div className="hero-description"> 
         <p>
@@ -63,7 +72,8 @@ export default function Hero(props) {
         </p>
       </div>
       <div className="hero-image">
-        <img src={heroImgSrc}/>
+        <img  src={heroImgSrc} alt={heroImgeAlt}/>
+      
       </div>
     </div>
   );
