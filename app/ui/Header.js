@@ -11,7 +11,6 @@ export default function Header() {
     setActiveTab(tab);
   }
 
-
   return (
     <header>
       <Link href={"/"}>

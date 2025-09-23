@@ -12,7 +12,7 @@ header h2 {
   min-width: 30%;
   height: 100%;
   display: flex;
-  font: 900 clamp(.8rem, 1.8vw, 2.2rem) var(--font-montserrat-underline);
+  font: 900 clamp(1.1rem, 1.2vw, 2.2rem) var(--font-montserrat-underline);
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   flex-wrap: nowrap;
@@ -24,15 +24,14 @@ header h2 > span {
   padding-right: 0.5rem;
 }
 
-header > nav{
+header > nav {
   width: 70%;
   height: 100%;
-  
 }
 
 header > nav ul {
   width: 100%;
-  height:inherit;
+  height: inherit;
   padding: 0 5%;
   display: flex;
   gap: 2rem;
@@ -40,10 +39,9 @@ header > nav ul {
   font-weight: 500;
 }
 
-header > nav ul > li  {
-  font-size: .8rem;
+header > nav ul > li {
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: -.06rem;
-  word-spacing: .1rem;
+  letter-spacing: -0.06rem;
+  word-spacing: 0.1rem;
 }

@@ -11,12 +11,14 @@ main {
 }
 
 .hero > .hero-title {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-.hero > .hero-title > h1,h2,h3 {
+.hero > .hero-title > h1,
+h2,
+h3 {
   width: fit-content;
 }
 
@@ -31,8 +33,6 @@ main {
   top: 20%;
   left: 4%;
   font-family: var(--font-lato);
-  font-weight: 600;
-  font-size: 2rem;
 }
 
 .hero > .hero-title > h3 {
@@ -40,18 +40,16 @@ main {
   top: 30%;
   left: 20%;
   font-family: var(--font-lato);
-  font-weight: 400;
-  font-size: 1.2rem;
 }
 
-.hero>.hero-description {
+.hero > .hero-description {
   width: 50%;
   position: absolute;
   top: 80%;
   text-align: justify;
 }
 
-.hero>.hero-image {
+.hero > .hero-image {
   width: 360px;
   height: 460px;
   position: absolute;
@@ -59,8 +57,8 @@ main {
   top: 5%;
   z-index: -1;
 }
-.hero>.hero-image>img{
-  width: 100% ;
+.hero > .hero-image > img {
+  width: 100%;
   height: 100%;
 }
 
@@ -93,10 +91,83 @@ main {
   width: 400px;
 }
 
-.feature-container {
+.feature-section {
   width: 100%;
+  margin: 6rem 0;
+  padding: 0 3rem;
+}
+
+.feature-section > div {
+  width: 100%;
+  height: 50vh;
   margin: 20px 0;
-  padding: 0 10px;
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-section > div > div {
+  height: 100%;
+}
+
+.feature-section > div > .feature-image-holders {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature-section > div > .feature-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.feature-section > div > .feature-container::-webkit-scrollbar {
+  display: none;
+}
+
+.feature-section > div > .feature-container > .feature-box {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  background: #ffe0b877;
+  scroll-snap-align: start;
+}
+
+.feature-section > div > .feature-container > .feature-box > button {
+  align-self: flex-end;
+}
+
+@media (max-width: 992px) {
+  .feature-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .feature-section > div > .feature-container {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .feature-section > div > .feature-image-holders {
+    width: 100%;
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
