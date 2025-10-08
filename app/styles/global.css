@@ -1,45 +1,60 @@
 @import "tailwindcss";
 
 :root {
-  --light: #ffffff;
-  --primary: #e7c287;
-  --secondary: #67553a;
-  --dark: #000000;
+  --light: #f8f8f8;
+  --primary: #ffd900;
+  --secondary: #d18718;
+  --dark: #1f1f1f;
 }
 
 h1 {
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 900;
+  font-family: var(--font-montserrat);
 }
 
 h2 {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 700;
+  font-family: var(--font-montserrat);
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 600;
+  font-family: var(--font-montserrat);
 }
 h4 {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: var(--font-montserrat);
 }
 
 p {
+  color: #4a5565;
+  margin-top: 12px;
   font-size: 1rem;
   font-family: var(--font-lato);
   line-height: 1.4;
   font-weight: 400;
 }
-.small-font {
+.small-text {
+  color: #4a5565;
   font-size: 0.875rem;
 }
+/* button style */
+.main-btn-style {
+  background-color: var(--primary);
+  color: var(--dark);
+  width: fit-content;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 600;
+}
 
-h1 {
-  font-family: var(--font-montserrat);
-  font-weight: 700;
-  font-size: 3.8rem;
+.main-btn-style:hover {
+  box-shadow: 0 0 2px 1px var(--dark);
+  font-weight: 900;
 }
 
 .arrow-btn-container {
@@ -84,7 +99,17 @@ body {
   font-family: var(--font-lato);
 }
 
-.bold {
-  font-weight: 900;
-  font-size: medium;
+main {
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.hero {
+  width: 100%;
+  min-height: 200px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  border-bottom: solid 1px #e7c28779;
 }

@@ -3,7 +3,7 @@ import Hero from "./ui/Hero";
 import Reviews from "./ui/Reviews";
 import fetchReviewData from "./lib/FetchData";
 import dotenv from "dotenv";
-import Button from "./ui/Button";
+import Button from "./ui/button";
 dotenv.config();
 
 export default async function Home() {
@@ -17,7 +17,7 @@ export default async function Home() {
       {/* Reviews */}
       <Reviews data={reviewData} />
       {/* Features */}
-      <div className="feature-section">
+      <div className="feature-section mx-auto">
         <h2>Scroll to find out everything we offer</h2>
         <div>
           <div className="feature-container">
