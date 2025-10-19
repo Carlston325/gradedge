@@ -79,38 +79,39 @@
 }
 
 .feature-section > div {
-  width: 100%;
-  height: 50vh;
-  margin: 20px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: start;
   gap: 10px;
-}
-
-.feature-section > div > div {
-  height: 100%;
+  width: 100%;
+  height: 550px;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 0.6fr;
+  justify-items: center;
 }
 
 .feature-section > div > .feature-image-holders {
-  width: 40%;
+  align-self: center;
+  width: 80%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: #fff8f0;
-  border-radius: 12px;
+  border-radius: 25px;
   padding: 2rem;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 8px -3px #00000066;
 }
 
 .feature-section > div > .feature-container {
-  width: 60%;
+  width: 100%;
+  height: 70%;
   display: flex;
   flex-direction: column;
+  gap: 20px;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  box-shadow: inset 0px -22px 20px -24px #0a0a0a;
 }
 .feature-section > div > .feature-container::-webkit-scrollbar {
   display: none;
@@ -120,7 +121,9 @@
   width: 100%;
   height: 100%;
   padding: 20px;
-  flex: 0 0 100%;
+  border: 1px solid #1f1f1f63;
+  border-radius: 25px;
+  flex: 0 0 80%;
   display: flex;
   flex-direction: column;
   align-items: start;

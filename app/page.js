@@ -3,7 +3,6 @@ import Hero from "./ui/Hero";
 import Reviews from "./ui/Reviews";
 import fetchReviewData from "./lib/FetchData";
 import dotenv from "dotenv";
-import Button from "./ui/button";
 dotenv.config();
 
 export default async function Home() {
@@ -37,7 +36,7 @@ export default async function Home() {
                 Mauris dignissim nulla ut neque pretium, nec bibendum nunc
                 varius. Cras at egestas quam, quis fringilla dui.
               </p>
-              <Button btnName="Create a CV" />
+              <button className="main-btn-style">Create a CV</button>
             </div>
             <div className="feature-box">
               <h3>Cover Letter</h3>
@@ -55,7 +54,8 @@ export default async function Home() {
                 Mauris dignissim nulla ut neque pretium, nec bibendum nunc
                 varius. Cras at egestas quam, quis fringilla dui.
               </p>
-              <Button btnName="Create a Cover Letter" />
+
+              <button className="main-btn-style">Create a Cover Letter</button>
             </div>
             <div className="feature-box">
               <h3>ATS Checker</h3>
@@ -73,11 +73,11 @@ export default async function Home() {
                 Mauris dignissim nulla ut neque pretium, nec bibendum nunc
                 varius. Cras at egestas quam, quis fringilla dui.
               </p>
-              <Button btnName="Get an ATS score" />
+              <button className="main-btn-style">Get an ATS score</button>
             </div>
           </div>
           <div className="feature-image-holders">
-            <Button btnName="Contact Us" />
+            <button className="main-btn-style">Contact Us</button>
           </div>
         </div>
       </div>

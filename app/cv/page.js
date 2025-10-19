@@ -38,7 +38,7 @@ export default function CVPage() {
           {/* Btns: Improve & ATS */}
           <div>
             <button className="main-btn-style !w-full">Improve My CV</button>
-            <button className="main-btn-style !w-full !text-white !bg-black  ">
+            <button className="secondary-btn-style !w-full">
               Run ATS Check
             </button>
           </div>
@@ -49,7 +49,7 @@ export default function CVPage() {
           <h2>Live Preview</h2>
           <div>
             {cvText ? (
-              <pre className="whitespace-pre-wrap font-lato">{cvText}</pre>
+              <pre>{cvText}</pre>
             ) : (
               <p className="text-gray-400 italic">
                 Your CV preview will appear here...

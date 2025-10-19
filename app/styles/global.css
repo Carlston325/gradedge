@@ -42,19 +42,28 @@ p {
   color: #4a5565;
   font-size: 0.875rem;
 }
-/* button style */
-.main-btn-style {
-  background-color: var(--primary);
-  color: var(--dark);
+/* button's style */
+.main-btn-style,
+.secondary-btn-style {
   width: fit-content;
   padding: 10px 15px;
   border-radius: 10px;
   font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
-
-.main-btn-style:hover {
-  box-shadow: 0 0 2px 1px var(--dark);
+.main-btn-style:hover,
+.secondary-btn-style:hover {
   font-weight: 900;
+  transform: scale(1.02);
+}
+.main-btn-style {
+  background-color: var(--primary);
+  color: var(--dark);
+}
+.secondary-btn-style {
+  background-color: var(--dark);
+  color: white;
 }
 
 .arrow-btn-container {
@@ -106,10 +115,10 @@ main {
 
 .hero {
   width: 100%;
-  min-height: 200px;
+  min-height: 250px;
   margin: 0 auto;
   padding: 40px;
   text-align: center;
   position: relative;
-  border-bottom: solid 1px #e7c28779;
+  border-bottom: 2px solid #ababab4d;
 }
