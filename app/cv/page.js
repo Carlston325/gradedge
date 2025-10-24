@@ -1,10 +1,73 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/cv-page.css";
+import DefaultCV, { CvTemplateOne } from "../ui/CvTemplates";
 
 export default function CVPage() {
-  const [cvText, setCvText] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
+  const [location, setLocation] = useState("");
+  const [summary, setSummary] = useState("");
+  const [skills, setSkills] = useState([""]);
+  const [workExperience, setWorkExperience] = useState("");
+  const [education, setEducation] = useState("");
+
+  const [cvPreview, setCvPreview] = useState("");
+  const [previewEnabled, setPreviewEnabled] = useState(false);
+
+  // add more inputs for skills
+  const [addedSkill, setAddedSkill] = useState(false);
+  const [skillArray, setSkillArray] = useState([]);
+  function addSkill() {
+    setAddedSkill(true);
+
+    setSkills(...skills, skillArray);
+  }
+
+  function submitCv() {
+    const fullCVData = {
+      name,
+      email,
+      number,
+      location,
+      summary,
+      skills,
+      workExperience,
+      education,
+    };
+
+    setCvPreview(fullCVData);
+    setPreviewEnabled(true);
+  }
+
+  useEffect(() => {
+    if (previewEnabled) {
+      setCvPreview({
+        name,
+        email,
+        number,
+        location,
+        summary,
+        skills,
+        workExperience,
+        education,
+      });
+    }
+  }, [
+    name,
+    email,
+    number,
+    location,
+    summary,
+    skills,
+    workExperience,
+    education,
+  ]);
+
   const [jobDesc, setJobDesc] = useState("");
+
+  console.log(cvPreview);
 
   return (
     <main>
@@ -19,25 +82,113 @@ export default function CVPage() {
         {/* Left Panel: Input  */}
         <div className="left-panel">
           <h2>Enter CV Details</h2>
-          {/* Write CV */}
-          <textarea
-            id="cvUserInput"
-            placeholder="Paste or write your CV here..."
-            value={cvText}
-            onChange={(e) => setCvText(e.target.value)}
-          />
-          {/* Upload CV */}
-          <label>
-            <span>Upload CV</span>
+
+          {/* Basic Info */}
+          <div className="input-group">
+            <label htmlFor="name">Full Name</label>
             <input
-              type="file"
-              accept=".pdf,.doc,.docx"
-              className="small-text"
+              id="name"
+              type="text"
+              placeholder="Enter your name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
-          </label>
-          {/* Btns: Improve & ATS */}
-          <div>
-            <button className="main-btn-style !w-full">Improve My CV</button>
+
+            <label htmlFor="email">Email</label>
+            <input
+              id="email"
+              type="text"
+              placeholder="Enter your email"
+              value={name}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+
+            <label htmlFor="number">Phone Number</label>
+            <input
+              id="number"
+              type="number"
+              placeholder="Enter your number"
+              value={name}
+              onChange={(e) => setNumber(e.target.value)}
+            />
+
+            <label htmlFor="location">Location</label>
+            <input
+              id="location"
+              type="location"
+              placeholder="Enter your location"
+              value={name}
+              onChange={(e) => setLocation(e.target.value)}
+            />
+          </div>
+
+          {/* Summary */}
+          <div className="input-group">
+            <label htmlFor="summary">Professional Summary</label>
+            <textarea
+              id="summary"
+              placeholder="Write a short summary..."
+              value={summary}
+              onChange={(e) => setSummary(e.target.value)}
+            />
+          </div>
+
+          {/* Skills */}
+          <div className="input-group">
+            <label htmlFor="skills">Skills</label>
+            {addedSkill ? <p>{skills}</p> : null}
+            <input
+              id="skills"
+              type="text"
+              placeholder="e.g. Communication, Hard-working, Confident"
+              value={skills}
+              onChange={(e) => setSkillArray(e.target.value)}
+            />
+
+            <button className="main-btn-style" onClick={addSkill}>
+              Add Skill
+            </button>
+          </div>
+
+          {/* Work Experience*/}
+          <div className="input-group">
+            <label htmlFor="cvUserInput">Work Experience</label>
+            <textarea
+              id="workExperience"
+              placeholder="Enter work experience..."
+              value={workExperience}
+              onChange={(e) => setWorkExperience(e.target.value)}
+            />
+          </div>
+
+          {/* Education */}
+          <div className="input-group">
+            <label htmlFor="skills">Education</label>
+            <input
+              id="education"
+              type="text"
+              placeholder="e.g. Your Schools/Colleges/Universities"
+              value={education}
+              onChange={(e) => setEducation(e.target.value)}
+            />
+          </div>
+          {/* Upload CV */}
+          <div className="input-group">
+            <label>
+              <span>Upload CV</span>
+              <input
+                type="file"
+                accept=".pdf,.doc,.docx"
+                className="small-text"
+              />
+            </label>
+          </div>
+
+          {/* Buttons */}
+          <div className="btn-group">
+            <button className="main-btn-style !w-full" onClick={submitCv}>
+              Improve My CV
+            </button>
             <button className="secondary-btn-style !w-full">
               Run ATS Check
             </button>
@@ -48,13 +199,7 @@ export default function CVPage() {
         <div className="right-panel">
           <h2>Live Preview</h2>
           <div>
-            {cvText ? (
-              <pre>{cvText}</pre>
-            ) : (
-              <p className="text-gray-400 italic">
-                Your CV preview will appear here...
-              </p>
-            )}
+            {cvPreview ? <CvTemplateOne data={cvPreview} /> : <DefaultCV />}
           </div>
         </div>
       </div>

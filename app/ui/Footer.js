@@ -44,7 +44,7 @@ export default () => {
           <li>Facebook</li>
           <li>LinkedIn</li>
         </ul>
-        <h4>© GRADEDGE 2025</h4>
+        <h5>© JobEdge made by GRADEDGE</h5>
       </div>
     </footer>
   );

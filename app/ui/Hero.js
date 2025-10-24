@@ -58,7 +58,7 @@ export default function Hero(props) {
   return (
     <div className="hero h-130">
       <div className="hero-title">
-        <h2>Hello, I am GRADEDGE</h2>
+        <h2>Hello, I am JobEdge</h2>
         <h3>But what matters is.</h3>
         <h1 className="title">Who Are You ______</h1>
       </div>
