@@ -24,7 +24,7 @@ export default function Reviews(props) {
     const review = containerRef.current;
     const scrollAmount = review.offsetWidth;
 
-    setInterval(() => {
+    const reviewInterval = setInterval(() => {
       const isAtEnd =
         review.scrollLeft + review.offsetWidth >= review.scrollWidth;
 
@@ -35,7 +35,7 @@ export default function Reviews(props) {
       }
     }, 15000);
 
-    return () => clearInterval();
+    return () => clearInterval(reviewInterval);
   }, []);
 
   return (

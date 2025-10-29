@@ -7,6 +7,26 @@
   --dark: #1f1f1f;
 }
 
+#alert-message {
+  padding: 20px;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  background-color: #ffcb4d;
+  align-self: center;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 5%;
+  text-align: left;
+  background: linear-gradient(to bottom right, #fff8f0, #fff);
+}
+
 h1 {
   font-size: 3rem;
   font-weight: 900;
@@ -66,30 +86,47 @@ p {
   color: white;
 }
 
+/* Arrow Buttons */
 .arrow-btn-container {
-  box-shadow: var(--dark) 0px 0px 10px -6px;
-  height: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 10px -6px var(--dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
 }
-.arrow-btn-container:hover {
-  box-shadow: var(--dark) 0px 0px 12px -5px;
+
+/* Left and right positioning (customize as needed) */
+.arrow-left {
+  left: 1rem;
 }
-.arrow-btn-container:active {
-  box-shadow: inset var(--dark) 0px 0px 10px -6px;
+.arrow-right {
+  right: 1rem;
 }
+
 .arrow-btn {
-  margin: 0 5px;
+  font-size: 1.5rem;
   color: var(--secondary);
-  opacity: 0.4;
-  top: 46%;
-  position: relative;
+  opacity: 0.6;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
-.arrow-btn-container:hover > .arrow-btn {
+
+.arrow-btn-container:hover .arrow-btn {
   color: var(--dark);
   opacity: 1;
 }
-.arrow-btn-container:active > .arrow-btn {
+
+.arrow-btn-container:active .arrow-btn {
   color: var(--secondary);
+  transform: scale(0.95);
 }
 
 .active-tab {
@@ -111,14 +148,4 @@ body {
 main {
   background-color: #f9fafb;
   min-height: 100vh;
-}
-
-.hero {
-  width: 100%;
-  min-height: 250px;
-  margin: 0 auto;
-  padding: 40px;
-  text-align: center;
-  position: relative;
-  border-bottom: 2px solid #ababab4d;
 }

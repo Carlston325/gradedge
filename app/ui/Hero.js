@@ -56,11 +56,19 @@ export default function Hero(props) {
   }, []);
 
   return (
-    <div className="hero h-130">
+    <div className="hero">
       <div className="hero-title">
         <h2>Hello, I am JobEdge</h2>
         <h3>But what matters is.</h3>
         <h1 className="title">Who Are You ______</h1>
+      </div>
+      <div className="hero-image">
+        <img
+          className="z-1 
+        "
+          src={heroImgSrc}
+          alt={heroImgeAlt}
+        />
       </div>
       <div className="hero-description">
         <p>
@@ -72,14 +80,6 @@ export default function Hero(props) {
           pass through <span className="obj-3">Applicant Tracking Systems</span>
           .
         </p>
-      </div>
-      <div className="hero-image">
-        <img
-          className="z-1 
-        "
-          src={heroImgSrc}
-          alt={heroImgeAlt}
-        />
       </div>
     </div>
   );

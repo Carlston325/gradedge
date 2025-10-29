@@ -2,28 +2,54 @@
 import { useState, useEffect } from "react";
 import "../styles/cv-page.css";
 import DefaultCV, { CvTemplateOne } from "../ui/CvTemplates";
+import Alert from "../ui/Alert";
 
 export default function CVPage() {
+  const [showAlert, setShowAlert] = useState("none");
+
+  // CV Input States
+
+  //Basic Info States
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [location, setLocation] = useState("");
   const [summary, setSummary] = useState("");
-  const [skills, setSkills] = useState([""]);
+
+  // Skill States
+  const [addedSkill, setAddedSkill] = useState(false);
+  const [skills, setSkills] = useState([]);
+  const [enterNewSkill, setEnterNewSkill] = useState("");
+
+  function addSkill(newSkill) {
+    setSkills((prevSkills) => {
+      if (prevSkills.includes(newSkill)) {
+        console.log(prevSkills);
+        setShowAlert("block");
+
+        return prevSkills;
+      } else {
+        const allSkills = [...prevSkills];
+        if (allSkills.length === 0) {
+          return [newSkill];
+        } else {
+          return [...prevSkills, newSkill];
+        }
+      }
+    });
+
+    setAddedSkill(true);
+    setEnterNewSkill("");
+  }
+
+  // Work Experience states
   const [workExperience, setWorkExperience] = useState("");
+
+  // Education states
   const [education, setEducation] = useState("");
 
   const [cvPreview, setCvPreview] = useState("");
   const [previewEnabled, setPreviewEnabled] = useState(false);
-
-  // add more inputs for skills
-  const [addedSkill, setAddedSkill] = useState(false);
-  const [skillArray, setSkillArray] = useState([]);
-  function addSkill() {
-    setAddedSkill(true);
-
-    setSkills(...skills, skillArray);
-  }
 
   function submitCv() {
     const fullCVData = {
@@ -67,16 +93,18 @@ export default function CVPage() {
 
   const [jobDesc, setJobDesc] = useState("");
 
-  console.log(cvPreview);
-
   return (
     <main>
+      <Alert
+        message="Skill already added"
+        display={showAlert}
+        closeAlert={() => setShowAlert("none")}
+      />
       {/* Hero Section */}
       <div className="hero">
         <h1>Build Your Job-Ready CV</h1>
         <p>AI-powered CV builder and ATS checker for graduates</p>
       </div>
-
       {/* Main Section: Editor + Preview */}
       <div className="editor">
         {/* Left Panel: Input  */}
@@ -99,7 +127,7 @@ export default function CVPage() {
               id="email"
               type="text"
               placeholder="Enter your email"
-              value={name}
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
 
@@ -108,7 +136,7 @@ export default function CVPage() {
               id="number"
               type="number"
               placeholder="Enter your number"
-              value={name}
+              value={number}
               onChange={(e) => setNumber(e.target.value)}
             />
 
@@ -117,7 +145,7 @@ export default function CVPage() {
               id="location"
               type="location"
               placeholder="Enter your location"
-              value={name}
+              value={location}
               onChange={(e) => setLocation(e.target.value)}
             />
           </div>
@@ -136,16 +164,21 @@ export default function CVPage() {
           {/* Skills */}
           <div className="input-group">
             <label htmlFor="skills">Skills</label>
-            {addedSkill ? <p>{skills}</p> : null}
+            {addedSkill ? <p>{skills.join(", ")}</p> : null}
             <input
               id="skills"
               type="text"
               placeholder="e.g. Communication, Hard-working, Confident"
-              value={skills}
-              onChange={(e) => setSkillArray(e.target.value)}
+              value={enterNewSkill}
+              onChange={(e) => setEnterNewSkill(e.target.value)}
             />
 
-            <button className="main-btn-style" onClick={addSkill}>
+            <button
+              className="main-btn-style"
+              onClick={() => {
+                addSkill(enterNewSkill);
+              }}
+            >
               Add Skill
             </button>
           </div>
@@ -203,7 +236,6 @@ export default function CVPage() {
           </div>
         </div>
       </div>
-
       {/* ATS Check Section */}
       <div className="ats-section">
         <h2 className="text-xl font-semibold">Tailor CV to Job</h2>

@@ -78,7 +78,7 @@ export default function Header() {
               Features
             </Link>
           </li> */}
-          {/* <li>
+          <li>
             <Link
               href="/profile"
               className={activeTab === "profile" ? "active-tab" : null}
@@ -88,7 +88,7 @@ export default function Header() {
             >
               Profile
             </Link>
-          </li> */}
+          </li>
         </ul>
       </nav>
     </header>

@@ -17,14 +17,14 @@ function CvTemplateOne(props) {
       <div className="cv-section">
         <h3>Professional Summary</h3>
         <p>{data.summary}</p>
-      </div>
+      </div>             
 
       {/* Skills */}
       <div className="cv-section">
         <h3>Skills</h3>
         <div className="cv-skills">{data.skills}</div>
       </div>
-
+  
       {/* Experience */}
       <div className="cv-section">
         <h3>Experience</h3>
