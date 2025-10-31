@@ -5,7 +5,13 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForwardIos";
 import ReviewCard from "./ReviewCard";
 
 export default function Reviews(props) {
-  const reviews = props.data;
+  const reviews = props.data.filter((items, index, self) => {
+    return (
+      index ===
+      self.findIndex((r) => r.name === items.name && r.role === r.role)
+    );
+  });
+
   const containerRef = useRef(null);
   const cardRef = useRef(null);
 
@@ -39,7 +45,7 @@ export default function Reviews(props) {
   }, []);
 
   return (
-    <div className="review-section">
+    <>
       <div
         className="arrow-btn-container"
         onClick={() => scrollReviews("left")}
@@ -53,6 +59,7 @@ export default function Reviews(props) {
               ref={cardRef}
               key={index}
               name={data.name}
+              role={data.role}
               stars={data.stars}
               review={data.review}
             />
@@ -65,6 +72,6 @@ export default function Reviews(props) {
       >
         <ArrowForwardIcon className="arrow-btn forward-arrow" />
       </div>
-    </div>
+    </>
   );
 }

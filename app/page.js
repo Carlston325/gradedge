@@ -13,8 +13,83 @@ export default async function Home() {
     <main>
       {/* Hero */}
       <Hero />
+      {/* About */}
+      <div className="about-section">
+        <h2>Who We Are</h2>
+        <p>
+          JobEdge is a modern career platform that helps UK students and recent
+          graduates land interviews faster. Build an ATS-friendly CV for free,
+          generate tailored cover letters, practise real employer-style tests,
+          and get confident with virtual interview training — all in one place.{" "}
+        </p>
+        <h3>Our Mission</h3>
+        <p>
+          Provide every graduate a fair edge with clear guidance, credible
+          results, and confidence when it counts.
+        </p>
+        <button className="main-btn-style">Learn More</button>
+      </div>
+
+      {/* Why Choose Us */}
+      <div>
+        <h2>Why Choose Us</h2>
+        <div className="reason-container">
+          <div className="reason-box">
+            <h3>Outsmart the ATS</h3>
+            <p>
+              We don’t just “format” CVs — we engineer them to pass modern
+              screens and surface the right keywords.
+            </p>
+          </div>
+          <div className="reason-box">
+            <h3>Ai Spped! Human Polish</h3>
+            <p>
+              Draft in minutes with AI, then expert reviewers refine your voice
+              so it sounds like you — only sharper.
+            </p>
+          </div>
+          <div className="reason-box">
+            <h3>Role-ready Cover Letters</h3>
+            <p>
+              Tailored to each job description with clear, credible stories
+              hiring managers actually read.
+            </p>
+          </div>
+          <div className="reason-box">
+            <h3>Practice that Mirrors Employers</h3>
+            <p>
+              Numerical, verbal, and situational tests designed to feel like
+              assessment day — so nothing surprises you.
+            </p>
+          </div>
+          <div className="reason-box">
+            <h3>Interview Coach in your Browser</h3>
+            <p>
+              Run realistic mock interviews and get specific, actionable
+              feedback you can apply immediately.
+            </p>
+          </div>
+          <div className="reason-box">
+            <h3>From Blank Page to "SEND" - Fast</h3>
+            <p>
+              Clean, student-first interface. No fluff. Create → Refine →
+              Download in minutes.
+            </p>
+          </div>
+          <div className="reason-box">
+            <h3>Built for UK Jobseekers</h3>
+            <p>
+              Local tone, local expectations, employer-style standards. You
+              focus on your story; we handle the rest.
+            </p>
+          </div>
+        </div>
+      </div>
       {/* Reviews */}
-      <Reviews data={reviewData} />
+      <div className="review-section">
+        <h2>Testimonials </h2>
+        <Reviews data={reviewData} />
+      </div>
       {/* Features */}
       <div className="feature-section mx-auto">
         <h2>Scroll to find out everything we offer</h2>

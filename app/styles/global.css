@@ -22,7 +22,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 4rem 5%;
+  padding: 4rem 6rem;
   text-align: left;
   background: linear-gradient(to bottom right, #fff8f0, #fff);
 }
@@ -84,49 +84,6 @@ p {
 .secondary-btn-style {
   background-color: var(--dark);
   color: white;
-}
-
-/* Arrow Buttons */
-.arrow-btn-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 0 10px -6px var(--dark);
-  cursor: pointer;
-  transition: all 0.2s ease;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-}
-
-/* Left and right positioning (customize as needed) */
-.arrow-left {
-  left: 1rem;
-}
-.arrow-right {
-  right: 1rem;
-}
-
-.arrow-btn {
-  font-size: 1.5rem;
-  color: var(--secondary);
-  opacity: 0.6;
-  transition: color 0.2s ease, opacity 0.2s ease;
-}
-
-.arrow-btn-container:hover .arrow-btn {
-  color: var(--dark);
-  opacity: 1;
-}
-
-.arrow-btn-container:active .arrow-btn {
-  color: var(--secondary);
-  transform: scale(0.95);
 }
 
 .active-tab {
