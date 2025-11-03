@@ -31,7 +31,7 @@ export default async function Home() {
       </div>
 
       {/* Why Choose Us */}
-      <div>
+      <div className="why-choose-us-section">
         <h2>Why Choose Us</h2>
         <div className="reason-container">
           <div className="reason-box">

@@ -35,6 +35,20 @@
   padding: 4rem 6rem;
 }
 
+/* WHY CHOOSE US SECTION */
+.why-choose-us-section {
+  background-color: #fff8f0;
+  padding: 4rem 6rem;
+}
+
+.reason-container {
+  display: flex;
+}
+.reason-box {
+  border: 2px solid black;
+  border-radius: 0 100px 100px 0px;
+}
+
 /* REVIEW SECTION */
 .review-section {
   background: #fff8f0;
