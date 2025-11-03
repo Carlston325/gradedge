@@ -6,10 +6,7 @@ import ReviewCard from "./ReviewCard";
 
 export default function Reviews(props) {
   const reviews = props.data.filter((items, index, self) => {
-    return (
-      index ===
-      self.findIndex((r) => r.name === items.name && r.role === r.role)
-    );
+    return index === self.findIndex((r) => r.name === items.name);
   });
 
   const containerRef = useRef(null);
