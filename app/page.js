@@ -1,14 +1,16 @@
-import "./styles/home.css";
-import Hero from "./ui/Hero";
-import Reviews from "./ui/Reviews";
-import fetchReviewData from "./lib/FetchData";
-import dotenv from "dotenv";
-dotenv.config();
+//Styles Imports
+import "@/app/home.css";
+// Data Imports
+import fetchReviewData from "@/lib/FetchData";
+
+// UI Imports
+import Hero from "@/app/components/Hero.js";
+import Reviews from "@/app/components/Reviews";
+import WhyChooseUs from "@/app/components/WhyChooseUs";
 
 export default async function Home() {
   //Fetch review data
   let reviewData = await fetchReviewData();
-  console.log(reviewData);
 
   return (
     <main>
@@ -35,55 +37,7 @@ export default async function Home() {
       <div className="why-choose-us-section">
         <h2>Why Choose Us</h2>
         <div className="reason-container">
-          <div className="reason-box">
-            <h3>Outsmart the ATS</h3>
-            <p>
-              We don’t just “format” CVs — we engineer them to pass modern
-              screens and surface the right keywords.
-            </p>
-          </div>
-          <div className="reason-box">
-            <h3>Ai Spped! Human Polish</h3>
-            <p>
-              Draft in minutes with AI, then expert reviewers refine your voice
-              so it sounds like you — only sharper.
-            </p>
-          </div>
-          <div className="reason-box">
-            <h3>Role-ready Cover Letters</h3>
-            <p>
-              Tailored to each job description with clear, credible stories
-              hiring managers actually read.
-            </p>
-          </div>
-          <div className="reason-box">
-            <h3>Practice that Mirrors Employers</h3>
-            <p>
-              Numerical, verbal, and situational tests designed to feel like
-              assessment day — so nothing surprises you.
-            </p>
-          </div>
-          <div className="reason-box">
-            <h3>Interview Coach in your Browser</h3>
-            <p>
-              Run realistic mock interviews and get specific, actionable
-              feedback you can apply immediately.
-            </p>
-          </div>
-          <div className="reason-box">
-            <h3>From Blank Page to "SEND" - Fast</h3>
-            <p>
-              Clean, student-first interface. No fluff. Create → Refine →
-              Download in minutes.
-            </p>
-          </div>
-          <div className="reason-box">
-            <h3>Built for UK Jobseekers</h3>
-            <p>
-              Local tone, local expectations, employer-style standards. You
-              focus on your story; we handle the rest.
-            </p>
-          </div>
+          <WhyChooseUs />
         </div>
       </div>
       {/* Reviews */}

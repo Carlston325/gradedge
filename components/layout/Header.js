@@ -2,7 +2,7 @@
 import ShieldIcon from "@mui/icons-material/Shield";
 import Link from "next/link";
 import { useState } from "react";
-import "../styles/header.css";
+import "@/components/layout/header.css";
 
 export default function Header() {
   const [activeTab, setActiveTab] = useState("home");

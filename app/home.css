@@ -42,9 +42,13 @@
 }
 
 .reason-container {
+  width: 100%;
   display: flex;
+  position: relative;
 }
 .reason-box {
+  background-color: #dadada;
+  width: 100%;
   border: 2px solid black;
   border-radius: 0 100px 100px 0px;
 }

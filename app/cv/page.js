@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
-import "../styles/cv-page.css";
-import DefaultCV, { CvTemplateOne } from "../ui/CvTemplates";
-import Alert from "../ui/Alert";
+import "@/styles/cv.css";
+import DefaultCV, { CvTemplateOne } from "../../ui/CvTemplates";
+import Alert from "../../ui/Alert";
 
 export default function CVPage() {
   const [showAlert, setShowAlert] = useState("none");

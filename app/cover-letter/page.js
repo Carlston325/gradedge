@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import "../styles/cv-page.css";
+import "@/styles/cv-page.css";
 
 export default function CVPage() {
   const [CoverLetterText, setCoverLetterTextText] = useState("");

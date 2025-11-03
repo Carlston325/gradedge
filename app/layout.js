@@ -5,9 +5,9 @@ import {
   Montserrat,
   Montserrat_Underline,
 } from "next/font/google";
-import "./styles/global.css";
-import Header from "./ui/Header";
-import Footer from "./ui/Footer";
+import "@/styles/global.css";
+import Header from "@/components/layout/Header.js";
+import Footer from "@/components/layout/Footer.js";
 
 const montserratUnderline = Montserrat_Underline({
   variable: "--font-montserrat-underline",
