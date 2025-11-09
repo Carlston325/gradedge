@@ -28,29 +28,77 @@
   border-radius: 20px;
   box-shadow: 0 4px 20px -6px rgba(0, 0, 0, 0.3);
 }
+/* HOW IT WORKS SECTION */
+.how-it-works-section {
+  background-color: #ffffff;
+  padding: 4rem 6rem;
+}
 
 /* ABOUT SECTION */
 .about-section {
-  background-color: #ffffff;
+  background: #fff8f0;
   padding: 4rem 6rem;
 }
 
 /* WHY CHOOSE US SECTION */
 .why-choose-us-section {
-  background-color: #fff8f0;
+  width: 100%;
+  height: 100%;
   padding: 4rem 6rem;
 }
 
-.reason-container {
+.why-choose-us-section h2 {
   width: 100%;
-  display: flex;
-  position: relative;
+  text-align: start;
 }
+
+.reason-container {
+  min-height: 250px;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  transition: all 0.3s ease;
+}
+
 .reason-box {
-  background-color: #dadada;
-  width: 100%;
-  border: 2px solid black;
-  border-radius: 0 100px 100px 0px;
+  flex: 1;
+  background: white;
+  color: var(--dark);
+  min-width: 150px;
+  padding: 1.5rem;
+  border-radius: 100px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+.reason-box p {
+  display: none;
+}
+
+.reason-box:hover {
+  flex: 2.5;
+  background: white;
+  color: var(--dark);
+  border: 1px solid black;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.reason-box:hover p {
+  display: block;
+}
+
+.reason-container:hover .reason-box:not(:hover) {
+  flex: 0.8;
+  opacity: 0.8;
 }
 
 /* REVIEW SECTION */
@@ -195,6 +243,16 @@
 
 .feature-section > div > .feature-container > .feature-box > button {
   align-self: flex-end;
+}
+
+@media (max-width: 1350px) {
+  .why-choose-us-section h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .reason-container {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 992px) {

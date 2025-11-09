@@ -16,17 +16,6 @@
   align-self: center;
 }
 
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 4rem 6rem;
-  text-align: left;
-  background: linear-gradient(to bottom right, #fff8f0, #fff);
-}
-
 h1 {
   font-size: 3rem;
   font-weight: 900;
@@ -105,4 +94,15 @@ body {
 main {
   background-color: #f9fafb;
   min-height: 100vh;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 6rem;
+  text-align: left;
+  background: linear-gradient(to bottom right, #fff8f0, #fff);
 }

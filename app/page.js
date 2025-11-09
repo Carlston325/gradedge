@@ -3,10 +3,10 @@ import "@/app/home.css";
 // Data Imports
 import fetchReviewData from "@/lib/FetchData";
 
-// UI Imports
+// Components Imports
 import Hero from "@/app/components/Hero.js";
-import Reviews from "@/app/components/Reviews";
-import WhyChooseUs from "@/app/components/WhyChooseUs";
+import Reviews from "@/app/components/Reviews.js";
+import WhyChooseUs from "@/app/components/WhyChooseUs.js";
 
 export default async function Home() {
   //Fetch review data
@@ -16,6 +16,16 @@ export default async function Home() {
     <main>
       {/* Hero */}
       <Hero />
+      {/* How it works */}
+      <div className="how-it-works-section">
+        <h2>How it Works?</h2>
+        <div className="steps-container">
+          <div className="step-box"></div>
+          <div className="step-box"></div>
+          <div className="step-box"></div>
+          <div className="step-box"></div>
+        </div>
+      </div>
       {/* About */}
       <div className="about-section">
         <h2>Who We Are</h2>
@@ -45,7 +55,7 @@ export default async function Home() {
         <h2>Testimonials </h2>
         <Reviews data={reviewData} />
       </div>
-      {/* Features */}
+      {/* Main Features */}
       <div className="feature-section mx-auto">
         <h2>Scroll to find out everything we offer</h2>
         <div>

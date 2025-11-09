@@ -1,10 +1,12 @@
 "use client";
 import ShieldIcon from "@mui/icons-material/Shield";
+// import bigLogo from "/big-logo.jpg";
 import Link from "next/link";
 import { useState } from "react";
 import "@/components/layout/header.css";
 
 export default function Header() {
+  const bigLogo = "/logo/big-logo-no-bg.png";
   const [activeTab, setActiveTab] = useState("home");
 
   function handleClickedTab(tab) {
@@ -13,13 +15,8 @@ export default function Header() {
 
   return (
     <header>
-      <Link href={"/"}>
-        <h2>
-          <span>
-            <ShieldIcon />
-          </span>
-          gradedge
-        </h2>
+      <Link href={"/"} className="header-logo-container p-4 w-0">
+        <img src={bigLogo} alt="website logo" className="header-logo" />
       </Link>
       <nav>
         <ul>
