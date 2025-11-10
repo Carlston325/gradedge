@@ -12,7 +12,7 @@ function CvTemplateOne(props) {
           <span>{data.location}</span>
         </div>
       </div>
-
+     
       {/* Summary */}
       <div className="cv-section">
         <h3>Professional Summary</h3>

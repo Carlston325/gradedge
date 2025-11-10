@@ -152,8 +152,19 @@ export default function CVPage() {
 
           {/* Summary */}
           <div className="input-group">
-            <label htmlFor="summary">Professional Summary</label>
+            <label htmlFor="summary">
+              Professional Summary
+              <button
+                className="main-btn-style !ml-3"
+                onClick={() => {
+                  addSkill(enterNewSkill);
+                }}
+              >
+                Ai
+              </button>
+            </label>
             <textarea
+              className=" min-h-30 border-1 p-2 rounded-md"
               id="summary"
               placeholder="Write a short summary..."
               value={summary}

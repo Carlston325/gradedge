@@ -22,6 +22,7 @@
   color: #4a5565;
 }
 .hero-description p {
+  width: ;
   color: var(--text-light);
 }
 
@@ -110,7 +111,7 @@
 .reason-box:hover p {
   display: block;
   color: var(--text-dark);
-  text-shadow: ;
+  text-shadow: none;
 }
 
 .reason-container:hover .reason-box:not(:hover) {

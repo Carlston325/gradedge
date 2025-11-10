@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --deep-navy-blue: #0b1e3a;
+  --deep-navy-blue: #00388d;
   --gold: #cba135;
   --cream: #f8f7f2;
   --text-light: #ededed;
@@ -82,12 +82,11 @@ p {
 }
 
 body {
-  /* background-color: var(--cream); */
-  /* background: linear-gradient(180deg, var(--deep-navy-blue), var(--gold)); */
+  background-color: var(--cream);
   background: linear-gradient(
     180deg,
     var(--deep-navy-blue),
-    var(--cream),
+    white,
     var(--gold)
   );
   width: 100%;
