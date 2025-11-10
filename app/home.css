@@ -1,6 +1,12 @@
 /* HERO SECTION */
 .hero-title {
-  flex: 1 1 45%;
+  flex: 1 1 55%;
+  color: var(--text-light);
+  text-shadow: 1px 1px var(--subtle-grey);
+}
+.hero-title .title {
+  text-shadow: 1px 1px var(--deep-navy-blue);
+  color: var(--gold);
 }
 
 .hero-title h1,
@@ -10,13 +16,17 @@
 }
 
 .hero-description {
-  flex: 1 1 45%;
+  flex: 1 1 100%;
+  margin-top: 30px;
   text-align: justify;
   color: #4a5565;
 }
+.hero-description p {
+  color: var(--text-light);
+}
 
 .hero-image {
-  flex: 1 1 45%;
+  flex: 1 1 35%;
   display: flex;
   justify-content: center;
 }
@@ -30,19 +40,23 @@
 }
 /* HOW IT WORKS SECTION */
 .how-it-works-section {
-  padding: 4rem 6rem;
+  background-color: var(--cream);
+  padding: 6rem 6rem;
+  border-top: 2px solid var(--gold);
 }
 
 /* ABOUT SECTION */
 .about-section {
-  padding: 4rem 6rem;
+  background-color: var(--cream);
+  padding: 6rem 6rem;
+  border-bottom: 2px solid var(--gold);
 }
 
 /* WHY CHOOSE US SECTION */
 .why-choose-us-section {
   width: 100%;
   height: 100%;
-  padding: 4rem 6rem;
+  padding: 6rem 6rem;
 }
 
 .why-choose-us-section h2 {
@@ -52,6 +66,7 @@
 
 .reason-container {
   min-height: 250px;
+  margin-top: 60px;
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -62,10 +77,11 @@
 
 .reason-box {
   flex: 1;
-
-  color: var(--dark);
+  background-color: var(--deep-navy-blue);
+  color: var(--text-light);
   min-width: 150px;
   padding: 1.5rem;
+  border: 2px solid var(--subtle-grey);
   border-radius: 100px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -81,8 +97,9 @@
 
 .reason-box:hover {
   flex: 2.5;
-  color: var(--dark);
-  border: 1px solid black;
+  background-color: var(--cream);
+  color: var(--text-dark);
+  border: 2px solid var(--gold);
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -100,7 +117,9 @@
 
 /* REVIEW SECTION */
 .review-section {
-  padding: 4rem 6rem;
+  background-color: var(--cream);
+  padding: 6rem 6rem;
+  border: 2px solid var(--gold);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -116,6 +135,8 @@
 }
 
 .review-container {
+  margin-bottom: 2rem;
+  padding: 2rem;
   scroll-snap-type: x mandatory;
   gap: 1.5rem;
   display: flex;
@@ -131,6 +152,7 @@
 .review-card {
   flex: 0 0 400px;
   border-radius: 15px;
+  border: 1px solid var(--gold);
   box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
   scroll-snap-align: start;
@@ -179,7 +201,7 @@
 
 /* FEATURE SECTION */
 .feature-section {
-  padding: 4rem 6rem;
+  padding: 6rem 6rem;
   text-align: center;
 }
 
@@ -188,13 +210,13 @@
 }
 
 .feature-section > div {
-  align-items: start;
-  gap: 10px;
   width: 100%;
-  margin: 20px 0;
+  margin: 60px 0;
   display: grid;
   grid-template-columns: 1fr 0.6fr;
   justify-items: center;
+  align-items: start;
+  gap: 10px;
 }
 
 .feature-section > div > .feature-image-holders {
@@ -218,7 +240,7 @@
   overflow-y: auto;
   scroll-behavior: smooth;
 }
-.feature-container ::-webkit-scrollbar {
+.feature-container::-webkit-scrollbar {
   display: none;
 }
 

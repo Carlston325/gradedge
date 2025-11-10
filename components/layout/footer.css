@@ -1,8 +1,8 @@
-
 footer {
+  background-color: var(--cream);
   margin: 1rem 0rem 0rem 0rem;
   padding: 2rem 0 2rem 0;
-  border: #1f180d solid;
+  border: solid var(--deep-navy-blue);
   border-width: 2px 0px 0px 0px;
   display: flex;
   flex-direction: column;
@@ -13,10 +13,21 @@ footer {
 footer > div {
   width: 100%;
   display: flex;
+  padding: 20px 6rem;
   justify-content: space-evenly;
   align-items: flex-start;
 }
 footer > div > ul {
   display: flex;
   gap: 2rem;
+}
+
+footer > div:nth-child(1) {
+  display: flex;
+  gap: 100px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+footer > div:nth-child(2) {
+  margin-top: 40px;
 }

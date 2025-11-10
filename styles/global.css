@@ -109,8 +109,8 @@ main {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem;
-  padding: 4rem 6rem;
+  gap: 10%;
+  padding: 6rem 6rem;
   text-align: left;
   /* background: linear-gradient(180deg, var(--deep-navy-blue), var(--cream)); */
 }
