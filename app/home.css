@@ -26,18 +26,29 @@
   color: var(--text-light);
 }
 
-.hero-image {
+.hero-video {
   flex: 1 1 35%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.hero-image img {
+.hero-video video {
   width: 100%;
-  max-width: 420px;
+  min-width: 200px;
   height: auto;
-  border-radius: 20px;
   box-shadow: 0 4px 20px -6px rgba(0, 0, 0, 0.3);
+}
+.hero-video svg {
+  margin: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-self: start;
+}
+.hero-video svg:nth-child(2) {
+  left: 20px;
 }
 /* HOW IT WORKS SECTION */
 .how-it-works-section {

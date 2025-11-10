@@ -55,13 +55,13 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="/ats-checker"
+              href="/online-assessment"
               className={activeTab === "ats-checker" ? "active-tab" : null}
               onClick={() => {
                 handleClickedTab("ats-checker");
               }}
             >
-              ATS Checker
+              Online Assessment
             </Link>
           </li>
           {/* <li>

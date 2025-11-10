@@ -1,5 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import PauseIcon from "@mui/icons-material/Pause";
+import VolumeUpIcon from "@mui/icons-material/VolumeUp";
+import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 
 export default function Hero(props) {
   const [heroImgSrc, setHeroImgSrc] = useState("/cv-image.jpg");
@@ -55,6 +59,24 @@ export default function Hero(props) {
     }, 8000);
   }, []);
 
+  const [volumeIsOff, setVolumeIsOff] = useState(false);
+
+  function handleAudio(trigger) {
+    setVolumeIsOff(trigger);
+  }
+
+  const [playVideo, setPlayVideo] = useState(true);
+  const videoRef = useRef();
+
+  function handlePause() {
+    setPlayVideo(false);
+    videoRef.current.pause();
+  }
+  function handlePlay() {
+    setPlayVideo(true);
+    videoRef.current.play();
+  }
+
   return (
     <div className="hero">
       <div className="hero-title">
@@ -64,13 +86,34 @@ export default function Hero(props) {
         <h3>But what matters is.</h3>
         <h1 className="title">Who Are You ______</h1>
       </div>
-      <div className="hero-image">
-        <img
-          className="z-1 
-        "
-          src={heroImgSrc}
-          alt={heroImgeAlt}
-        />
+      <div className="hero-video">
+        <video
+          ref={videoRef}
+          type="video/mp4"
+          src="/videos/ai-interview-coach.mp4"
+          preload="auto"
+          loop
+          autoPlay
+          playsInline
+          muted={volumeIsOff}
+        ></video>
+
+        {playVideo ? (
+          <PauseIcon onClick={() => handlePause} className="text-white" />
+        ) : (
+          <PlayArrowIcon onClick={() => handlePlay} className="text-white" />
+        )}
+        {volumeIsOff ? (
+          <VolumeOffIcon
+            onClick={() => handleAudio(false)}
+            className="text-white"
+          />
+        ) : (
+          <VolumeUpIcon
+            onClick={() => handleAudio(true)}
+            className="text-white"
+          />
+        )}
       </div>
       <div className="hero-description">
         <p>

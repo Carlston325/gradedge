@@ -6,7 +6,11 @@ function Alert(props) {
 
   return (
     <div id="alert-message" style={{ display: display }}>
-      <button onClick={props.closeAlert} style={{ color: "red" }}>
+      <button
+        className="cursor-pointer"
+        onClick={props.closeAlert}
+        style={{ color: "red" }}
+      >
         X
       </button>
       <h1>Something went wrong</h1>
