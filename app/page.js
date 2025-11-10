@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 //Styles Imports
 import "@/app/home.css";
 // Data Imports
