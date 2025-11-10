@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --light: #f8f8f8;
-  --primary: #ffd900;
-  --secondary: #d18718;
-  --dark: #1f1f1f;
+  --deep-navy-blue: #0b1e3a;
+  --gold: #cba135;
+  --cream: #f8f7f2;
+  --text-light: #ededed;
+  --text-dark: #2a2a2a;
+  --subtle-grey: #6b7280;
 }
 
 #alert-message {
@@ -12,7 +14,7 @@
   position: fixed;
   top: 25%;
   left: 25%;
-  background-color: #ffcb4d;
+  background-color: var(--cream);
   align-self: center;
 }
 
@@ -67,11 +69,11 @@ p {
   transform: scale(1.02);
 }
 .main-btn-style {
-  background-color: var(--primary);
+  background-color: var(--gold);
   color: var(--dark);
 }
 .secondary-btn-style {
-  background-color: var(--dark);
+  background-color: var(--subtle-grey);
   color: white;
 }
 
@@ -80,7 +82,14 @@ p {
 }
 
 body {
-  background-color: var(--light);
+  /* background-color: var(--cream); */
+  /* background: linear-gradient(180deg, var(--deep-navy-blue), var(--gold)); */
+  background: linear-gradient(
+    180deg,
+    var(--deep-navy-blue),
+    var(--cream),
+    var(--gold)
+  );
   width: 100%;
   min-height: 100vh;
   margin: 0;
@@ -92,7 +101,6 @@ body {
 }
 
 main {
-  background-color: #f9fafb;
   min-height: 100vh;
 }
 
@@ -104,5 +112,5 @@ main {
   gap: 2rem;
   padding: 4rem 6rem;
   text-align: left;
-  background: linear-gradient(to bottom right, #fff8f0, #fff);
+  /* background: linear-gradient(180deg, var(--deep-navy-blue), var(--cream)); */
 }

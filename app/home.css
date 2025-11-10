@@ -30,13 +30,11 @@
 }
 /* HOW IT WORKS SECTION */
 .how-it-works-section {
-  background-color: #ffffff;
   padding: 4rem 6rem;
 }
 
 /* ABOUT SECTION */
 .about-section {
-  background: #fff8f0;
   padding: 4rem 6rem;
 }
 
@@ -64,7 +62,7 @@
 
 .reason-box {
   flex: 1;
-  background: white;
+
   color: var(--dark);
   min-width: 150px;
   padding: 1.5rem;
@@ -83,7 +81,6 @@
 
 .reason-box:hover {
   flex: 2.5;
-  background: white;
   color: var(--dark);
   border: 1px solid black;
   border-radius: 1rem;
@@ -103,7 +100,6 @@
 
 /* REVIEW SECTION */
 .review-section {
-  background: #fff8f0;
   padding: 4rem 6rem;
   position: relative;
   overflow: hidden;
@@ -134,7 +130,6 @@
 
 .review-card {
   flex: 0 0 400px;
-  background: white;
   border-radius: 15px;
   box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
@@ -185,7 +180,6 @@
 /* FEATURE SECTION */
 .feature-section {
   padding: 4rem 6rem;
-  background: linear-gradient(to bottom, #fff, #fff8f0);
   text-align: center;
 }
 
