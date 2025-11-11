@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --deep-navy-blue: #00388d;
-  --gold: #cba135;
+  --navy-blue: #2e91ff;
+  --gold: #e1c001;
   --cream: #f8f7f2;
   --text-light: #ededed;
   --text-dark: #2a2a2a;
   --subtle-grey: #6b7280;
+  --deep-navy: #001128;
 }
 
 #alert-message {
@@ -19,39 +20,38 @@
 }
 
 h1 {
-  font-size: 3rem;
+  /* font-family: var(--font-montserrat); */
+  font-size: 48px;
   font-weight: 900;
-  font-family: var(--font-montserrat);
 }
 
 h2 {
-  font-size: 2.5rem;
+  /* font-family: var(--font-montserrat); */
+  font-size: 36px;
   font-weight: 700;
-  font-family: var(--font-montserrat);
 }
 
 h3 {
-  font-size: 1.75rem;
+  /* font-family: var(--font-montserrat); */
+  font-size: 28px;
   font-weight: 600;
-  font-family: var(--font-montserrat);
 }
 h4 {
-  font-size: 1.25rem;
+  /* font-family: var(--font-montserrat); */
+  font-size: 20px;
   font-weight: 500;
-  font-family: var(--font-montserrat);
 }
 
 p {
-  color: #4a5565;
+  /* font-family: var(--font-lato); */
   margin-top: 12px;
-  font-size: 1rem;
-  font-family: var(--font-lato);
+  font-size: 16px;
   line-height: 1.4;
   font-weight: 400;
 }
 .small-text {
-  color: #4a5565;
-  font-size: 0.875rem;
+  /* font-family: var(--font-lato); */
+  font-size: 14px;
 }
 /* button's style */
 .main-btn-style,
@@ -84,8 +84,8 @@ p {
 body {
   background: linear-gradient(
     180deg,
-    var(--deep-navy-blue),
-    white,
+    var(--navy-blue),
+    var(--cream),
     var(--gold)
   );
   width: 100%;
