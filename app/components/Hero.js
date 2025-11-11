@@ -68,13 +68,13 @@ export default function Hero(props) {
   const [playVideo, setPlayVideo] = useState(true);
   const videoRef = useRef();
 
-  function handlePause() {
-    setPlayVideo(false);
-    videoRef.current.pause();
-  }
-  function handlePlay() {
-    setPlayVideo(true);
-    videoRef.current.play();
+  function handleVideoToggle(trigger) {
+    setPlayVideo(trigger);
+    if (trigger) {
+      videoRef.current.play();
+    } else {
+      videoRef.current.pause();
+    }
   }
 
   return (
@@ -98,20 +98,26 @@ export default function Hero(props) {
           muted={volumeIsOff}
         ></video>
 
-        {playVideo ? (
-          <PauseIcon onClick={() => handlePause} className="text-white" />
-        ) : (
-          <PlayArrowIcon onClick={() => handlePlay} className="text-white" />
-        )}
         {volumeIsOff ? (
           <VolumeOffIcon
             onClick={() => handleAudio(false)}
-            className="text-white"
+            className="text-white/20"
           />
         ) : (
           <VolumeUpIcon
             onClick={() => handleAudio(true)}
-            className="text-white"
+            className="text-white/50"
+          />
+        )}
+        {playVideo ? (
+          <PauseIcon
+            onClick={() => handleVideoToggle(false)}
+            className="text-white/50"
+          />
+        ) : (
+          <PlayArrowIcon
+            onClick={() => handleVideoToggle(true)}
+            className="text-white/50"
           />
         )}
       </div>

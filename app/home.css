@@ -32,6 +32,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .hero-video video {
@@ -39,6 +40,8 @@
   min-width: 200px;
   height: auto;
   box-shadow: 0 4px 20px -6px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  /* mix-blend-mode: lighten; */
 }
 .hero-video svg {
   margin: 5px;
@@ -47,9 +50,11 @@
   left: 0;
   justify-self: start;
 }
+
 .hero-video svg:nth-child(2) {
-  left: 20px;
+  left: 30px;
 }
+
 /* HOW IT WORKS SECTION */
 .how-it-works-section {
   background-color: var(--cream);
