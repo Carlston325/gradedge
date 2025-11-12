@@ -88,25 +88,29 @@ export default function Hero() {
         handleVideoToggle(false);
         handleAudio(true);
       }
-      console.log(videoRef.current.muted);
     }
   }, []);
 
   //Title
-  const getName = firstName("GB", Gender.Male);
   const [placeholder, setPlaceholder] = useState("_______");
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (placeholder !== "_______") {
-        setPlaceholder("_______");
-      } else {
-        setPlaceholder(getName);
-      }
+      setPlaceholder((prev) => {
+        if (prev === "_______") {
+          const name =
+            Math.random() > 0.5
+              ? firstName("GB", Gender.Male)
+              : firstName("GB", Gender.Female);
+          return name;
+        } else {
+          return "_______";
+        }
+      });
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [placeholder]);
+  }, []);
 
   return (
     <div className="hero">
@@ -121,6 +125,7 @@ export default function Hero() {
             id="user-name-input"
             type="text"
             placeholder={placeholder}
+            onFocus={() => setPlaceholder("")}
           ></input>
         </label>
       </div>

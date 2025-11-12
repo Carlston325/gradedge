@@ -54,25 +54,29 @@
 }
 .hero-title > label input {
   color: var(--gold);
-  width: inherit;
+  width: 0;
   animation: typingBlink 4s steps(20, end) infinite;
 }
 
 .hero-title > label input:focus {
   animation: none;
+  border: none;
+}
+.hero-title > label input::placeholder {
+  transition: opacity 0.5s ease;
 }
 
 @keyframes typingBlink {
   0% {
     width: 0;
   }
-  60% {
+  30% {
     width: 100%;
   }
-  80% {
+  90% {
     opacity: 1;
   }
-  90% {
+  95% {
     opacity: 0;
   }
   100% {
