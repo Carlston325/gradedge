@@ -1,11 +1,13 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
+import { firstName, Gender } from "full-name-generator";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 
 export default function Hero() {
+  // Description
   useEffect(() => {
     const objOne = document.querySelector(".obj-1");
     const objTwo = document.querySelector(".obj-2");
@@ -59,6 +61,7 @@ export default function Hero() {
     }, 8000);
   }, []);
 
+  // Video
   const [volumeIsOff, setVolumeIsOff] = useState(false);
 
   function handleAudio(trigger) {
@@ -84,15 +87,26 @@ export default function Hero() {
 
         handleVideoToggle(false);
         handleAudio(true);
-
-        // setTimeout(() => {
-        //   handleVideoToggle(true);
-        //   handleAudio(false);
-        // }, [1000]);
       }
       console.log(videoRef.current.muted);
     }
   }, []);
+
+  //Title
+  const getName = firstName("GB", Gender.Male);
+  const [placeholder, setPlaceholder] = useState("_______");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (placeholder !== "_______") {
+        setPlaceholder("_______");
+      } else {
+        setPlaceholder(getName);
+      }
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [placeholder]);
 
   return (
     <div className="hero">
@@ -101,9 +115,13 @@ export default function Hero() {
           Hello, I am <span>JobEdge</span>
         </h2>
         <h3>But what matters is.</h3>
-        <h1 className="title">Who Are You {/* <span>___________</span> */}</h1>
+        <h1 className="title">Who Are You {/* <span>_______</span> */}</h1>
         <label htmlFor="user-name-input">
-          <input id="user-name-input" type="text" placeholder="_______"></input>
+          <input
+            id="user-name-input"
+            type="text"
+            placeholder={placeholder}
+          ></input>
         </label>
       </div>
       <div className="hero-video">
